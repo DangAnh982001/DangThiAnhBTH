@@ -16,19 +16,15 @@ namespace DangThiAnhBTH.Controllers
             ViewBag.mess = thongBao;
               return View();
            }
-         [HttpPost]
-           public IActionResult Create (string a, string b, string c)
+         [HttpPost] 
+           public IActionResult Index (string a, string b, string c)
            {
-            double x = Convert.ToDouble(a);
-            double y = Convert.ToDouble(b);
-            double z = Convert.ToDouble(c);
-            string ptbac2 = gpt.GiaiPhuongTrinhBacHai(x,y,z);
+            double hesoA = Convert.ToDouble(a);
+            double hesoB = Convert.ToDouble(b);
+            double hesoC = Convert.ToDouble(c);
+            string ptbac2 = gpt.GiaiPhuongTrinhBacHai(hesoA,hesoB,hesoC);
             ViewBag.mes = ptbac2;
             return View();
-           }
-       
-           
+           }      
     }
-
-    
 }
